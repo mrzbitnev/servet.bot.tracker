@@ -13,7 +13,6 @@ public class ServerBotTrecker implements Runnable {
         try (DataOutputStream out = new DataOutputStream(socket.getOutputStream());
              DataInputStream in = new DataInputStream(new BufferedInputStream(socket.getInputStream()))) {
 
-            MessageCipher messageCipher = new MessageCipher();
 
             String magnetLink = in.readUTF();
             System.out.println(magnetLink);
